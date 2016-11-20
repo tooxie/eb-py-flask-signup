@@ -13,11 +13,9 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename="bootstrap/css/jumbotron-narrow.css") }}" rel="stylesheet">
-
   </head>
 
   <body>
-
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
@@ -28,11 +26,11 @@
         </ul>
         <h3 class="text-muted">A New Startup</h3>
       </div>
-    	{% if flask_debug %}
+      {% if config.debug %}
       <div class="alert alert-danger">
         Flask is in debug mode. This is not safe for production.
       </div>
-    	{% endif %}
+      {% endif %}
       <div id="signupSuccess" class="alert alert-success" style="display:none">
         <p id="signupSuccessText">Thanks for signing up! You'll be among the first to know when we launch.</p>
       </div>
@@ -48,11 +46,10 @@
         <p><a class="btn btn-lg btn-success"  data-toggle="modal" href="#signupModal">Sign up today</a></p>
       </div>
 
-
       <div class="footer">
         <p>&copy; A New Startup 2013</p>
       </div>
-      
+
       <!-- Modal -->
        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
          <div class="modal-dialog">
